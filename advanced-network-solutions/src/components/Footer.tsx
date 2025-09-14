@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -63,7 +63,7 @@ const Footer = () => {
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-4 w-4 mr-3 text-teal-400" />
                 <span>New York, NY</span>
@@ -79,6 +79,49 @@ const Footer = () => {
               <div className="flex items-center text-gray-300">
                 <Clock className="h-4 w-4 mr-3 text-teal-400" />
                 <span>24/7 Support Available</span>
+              </div>
+            </div>
+
+            {/* Social Media Icons */}
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
+              <div className="flex space-x-4">
+                <Link
+                  href="https://facebook.com/advancednetworkconsulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-teal-400 transition-colors"
+                  aria-label="Follow us on Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://twitter.com/anc_consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-teal-400 transition-colors"
+                  aria-label="Follow us on Twitter"
+                >
+                  <Twitter className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://linkedin.com/company/advanced-network-consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-teal-400 transition-colors"
+                  aria-label="Follow us on LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+                <Link
+                  href="https://instagram.com/anc_consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-teal-400 transition-colors"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
+                </Link>
               </div>
             </div>
           </div>

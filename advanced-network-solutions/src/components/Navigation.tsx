@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, Server, Shield, Cloud, Network, Headphones, Brain, Wrench, ArrowUp } from 'lucide-react';
+import { Menu, X, ChevronDown, Server, Shield, Cloud, Network, Headphones, Brain, Wrench, ArrowUp, Mic, Bot, Database, Settings, Search } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +41,11 @@ const Navigation = () => {
     { name: 'Network Infrastructure', href: '/services/network', description: 'Reliable network design', icon: Network },
     { name: 'Strategy & vCIO', href: '/services/strategy', description: 'Virtual CIO services', icon: Brain },
     { name: 'SharePoint', href: '/services/sharepoint', description: 'Collaboration platforms', icon: ArrowUp },
+    { name: 'AI Receptionist', href: '/services/ai-receptionist', description: 'Voice automation', icon: Mic },
+    { name: 'AI Agents', href: '/services/ai-agents', description: 'Task bots', icon: Bot },
+    { name: 'Private LLMs', href: '/services/private-llms', description: 'Secure models', icon: Database },
+    { name: 'Model Tuning', href: '/services/model-tuning', description: 'Custom training', icon: Settings },
+    { name: 'RAG Solutions', href: '/services/rag-solutions', description: 'Smart search', icon: Search },
   ];
 
   const industries = [
