@@ -141,7 +141,7 @@ const PackagesPricingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-gradient-to-b from-blue-50 to-white pt-16 pb-12 lg:pt-24 lg:pb-20 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Transparent Pricing for Managed IT Services
@@ -165,6 +165,22 @@ const PackagesPricingPage = () => {
               <Users className="h-6 w-6 text-teal-600 mr-3" />
               <span className="text-gray-700 font-medium">NYC-Based Team</span>
             </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+            <Link 
+              href="/contact" 
+              className="bg-navy-900 text-white px-8 py-3 rounded-md font-medium hover:bg-navy-800 transition-colors inline-flex items-center justify-center"
+            >
+              Get Custom Quote
+            </Link>
+            <Link 
+              href="/risk-assessment" 
+              className="bg-white text-navy-900 border-2 border-navy-900 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors inline-flex items-center justify-center"
+            >
+              Free Risk Assessment
+            </Link>
           </div>
         </div>
       </section>

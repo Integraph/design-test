@@ -70,7 +70,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 ml-8">
+          <div className="hidden lg:flex items-center space-x-8 ml-0">
             <Link href="/" className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium whitespace-nowrap">
               Home
             </Link>
