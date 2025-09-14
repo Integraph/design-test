@@ -1,0 +1,7 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ANC Logo - Blue version for light backgrounds -->
+  <rect width="40" height="40" rx="8" fill="#0a1929"/>
+  <text x="20" y="26" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="bold">ANC</text>
+  <text x="50" y="16" fill="#0a1929" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Advanced Network Consulting</text>
+  <text x="50" y="28" fill="#64748b" font-family="Inter, sans-serif" font-size="10">Secure IT & Cybersecurity Solutions</text>
+</svg>
