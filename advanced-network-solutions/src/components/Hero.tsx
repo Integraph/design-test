@@ -1,8 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  
   const features = [
     'NYDFS & HIPAA Compliant',
     '24/7 Proactive Monitoring',
@@ -10,17 +15,59 @@ const Hero = () => {
     'Dedicated Account Manager'
   ];
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const setPlaybackRate = () => {
+        video.playbackRate = 0.5;
+      };
+      
+      // Set playback rate when video is ready
+      if (video.readyState >= 2) {
+        setPlaybackRate();
+      } else {
+        video.addEventListener('loadeddata', setPlaybackRate);
+        video.addEventListener('canplay', setPlaybackRate);
+      }
+      
+      return () => {
+        video.removeEventListener('loadeddata', setPlaybackRate);
+        video.removeEventListener('canplay', setPlaybackRate);
+      };
+    }
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/anc-hero-img.png"
-          alt="Advanced Network Consulting - Secure IT Infrastructure"
-          fill
-          className="object-cover"
-          priority
-        />
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          onLoadedData={(e) => {
+            e.currentTarget.playbackRate = 0.5;
+          }}
+          onCanPlay={(e) => {
+            e.currentTarget.playbackRate = 0.5;
+          }}
+          onPlay={(e) => {
+            e.currentTarget.playbackRate = 0.5;
+          }}
+        >
+          <source src="/anc-hero-video.mp4" type="video/mp4" />
+          {/* Fallback image in case video doesn't load */}
+          <Image
+            src="/anc-hero-img.png"
+            alt="Advanced Network Consulting - Secure IT Infrastructure"
+            fill
+            className="object-cover"
+            priority
+          />
+        </video>
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-navy-900/60"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/80 via-navy-900/40 to-transparent"></div>

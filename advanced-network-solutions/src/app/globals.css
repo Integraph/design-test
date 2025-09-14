@@ -50,7 +50,7 @@ html {
 
 /* Button hover effects */
 .btn-primary {
-  @apply bg-navy-900 text-white px-6 py-3 rounded-md font-medium hover:bg-navy-800 transition-colors duration-200;
+  @apply bg-navy-950 text-white px-6 py-3 rounded-md font-medium hover:bg-navy-900 transition-colors duration-200;
 }
 
 .btn-secondary {
