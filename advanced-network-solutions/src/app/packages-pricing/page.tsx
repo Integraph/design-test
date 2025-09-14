@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
-  Check, 
-  X, 
+  CheckCircle, 
+  XCircle, 
   Star, 
   Shield, 
   Calendar,
@@ -176,10 +176,10 @@ const PackagesPricingPage = () => {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`relative rounded-2xl shadow-lg border-2 ${
+                className={`relative rounded-2xl border-2 ${
                   pkg.popular 
-                    ? 'border-navy-500 bg-navy-50' 
-                    : 'border-gray-200 bg-white'
+                    ? 'border-navy-500 bg-navy-50 shadow-2xl' 
+                    : 'border-gray-200 bg-white shadow-lg'
                 }`}
               >
                 {pkg.popular && (
@@ -208,31 +208,37 @@ const PackagesPricingPage = () => {
                       </span>
                     </div>
 
-                    {/* Key Metrics */}
-                    <div className="grid grid-cols-3 gap-4 mb-6">
+                    {/* Key Metrics - Reduced text size */}
+                    <div className="grid grid-cols-3 gap-2 mb-6">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">{pkg.metrics.uptime}</div>
+                        <div className="text-lg font-bold text-gray-900">{pkg.metrics.uptime}</div>
                         <div className="text-xs text-gray-500">Uptime SLA</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">{pkg.metrics.response}</div>
+                        <div className="text-lg font-bold text-gray-900">{pkg.metrics.response}</div>
                         <div className="text-xs text-gray-500">Response</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">{pkg.metrics.support}</div>
+                        <div className="text-lg font-bold text-gray-900">{pkg.metrics.support}</div>
                         <div className="text-xs text-gray-500">Support</div>
                       </div>
                     </div>
                   </div>
 
-                  {/* CTA Button */}
+                  {/* CTA Button - Moved above features */}
                   <Link
                     href="/contact"
-                    className={`w-full py-3 px-4 rounded-md font-medium text-center transition-colors mb-6 ${
+                    className={`w-full py-3 px-4 rounded-md font-medium text-center transition-colors mb-4 ${
                       pkg.popular
                         ? 'bg-navy-900 text-white hover:bg-navy-800'
                         : 'bg-white text-gray-900 border-2 border-gray-900 hover:bg-gray-50'
                     }`}
+                    style={{ 
+                      width: '100%',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center'
+                    }}
                   >
                     Get Started →
                   </Link>
@@ -243,7 +249,7 @@ const PackagesPricingPage = () => {
                     <ul className="space-y-2">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
-                          <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-700">{feature}</span>
                         </li>
                       ))}
@@ -257,7 +263,7 @@ const PackagesPricingPage = () => {
                       <ul className="space-y-2">
                         {pkg.excluded.map((excluded, excludedIndex) => (
                           <li key={excludedIndex} className="flex items-start">
-                            <X className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <XCircle className="h-4 w-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-gray-600">{excluded}</span>
                           </li>
                         ))}
@@ -295,7 +301,7 @@ const PackagesPricingPage = () => {
                 <ul className="space-y-3 mb-6">
                   {addon.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <Check className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
                   ))}
