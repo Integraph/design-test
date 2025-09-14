@@ -48,6 +48,22 @@ html {
   outline-offset: 2px;
 }
 
+/* Remove focus outline from logo */
+a:focus img,
+a:focus svg {
+  outline: none !important;
+}
+
+/* Specifically target logo link */
+a[href="/"]:focus {
+  outline: none !important;
+}
+
+/* Target logo container specifically */
+.flex-shrink-0:focus {
+  outline: none !important;
+}
+
 /* Button hover effects */
 .btn-primary {
   @apply bg-navy-950 text-white px-6 py-3 rounded-md font-medium hover:bg-navy-900 transition-colors duration-200;
