@@ -1,6 +1,6 @@
-# Advanced Network Solutions - Marketing Website
+# Advanced Network Consulting (ANC) - Marketing Website
 
-A modern, responsive marketing website for Advanced Network Solutions, a managed IT and cybersecurity provider for regulated SMBs in NYC.
+A modern, responsive marketing website for Advanced Network Consulting (ANC), a managed IT and cybersecurity provider for regulated SMBs and mid-market clients in NYC.
 
 ## 🚀 Features
 

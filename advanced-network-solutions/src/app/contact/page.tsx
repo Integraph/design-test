@@ -62,7 +62,7 @@ const ContactPage = () => {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us a detailed message',
-      contact: 'info@advancednetworksolutions.com',
+      contact: 'info@advancednetworkconsulting.com',
       availability: 'Response within 2 hours'
     },
     {
@@ -104,7 +104,7 @@ const ContactPage = () => {
               We&apos;ve received your message and will get back to you within 2 hours during business hours.
             </p>
 
-            <div className="bg-blue-50 rounded-lg p-6 mb-8">
+            <div className="bg-teal-50 rounded-lg p-6 mb-8">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 What Happens Next?
               </h3>
@@ -134,7 +134,7 @@ const ContactPage = () => {
               </a>
               
               <a
-                href="mailto:info@advancednetworksolutions.com"
+                href="mailto:info@advancednetworkconsulting.com"
                 className="btn-secondary inline-flex items-center justify-center"
               >
                 <Mail className="mr-2 h-4 w-4" />
@@ -150,10 +150,10 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-teal-50 to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-teal-100 text-teal-800">
               <MessageSquare className="h-4 w-4 mr-2" />
               Get in Touch
             </span>
@@ -161,7 +161,7 @@ const ContactPage = () => {
           
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Ready to Transform Your{' '}
-            <span className="text-blue-900">IT Infrastructure?</span>
+            <span className="text-navy-900">IT Infrastructure?</span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -188,8 +188,8 @@ const ContactPage = () => {
               const IconComponent = method.icon;
               return (
                 <div key={index} className="card text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-6 w-6 text-teal-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {method.title}
@@ -197,7 +197,7 @@ const ContactPage = () => {
                   <p className="text-gray-600 mb-4">
                     {method.description}
                   </p>
-                  <div className="text-lg font-medium text-blue-900 mb-2">
+                  <div className="text-lg font-medium text-navy-900 mb-2">
                     {method.contact}
                   </div>
                   <div className="text-sm text-gray-500">
@@ -215,7 +215,7 @@ const ContactPage = () => {
                 onClick={() => setActiveTab('schedule')}
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   activeTab === 'schedule'
-                    ? 'bg-white text-blue-900 shadow-sm'
+                    ? 'bg-white text-navy-900 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -226,7 +226,7 @@ const ContactPage = () => {
                 onClick={() => setActiveTab('message')}
                 className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   activeTab === 'message'
-                    ? 'bg-white text-blue-900 shadow-sm'
+                    ? 'bg-white text-navy-900 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -247,7 +247,7 @@ const ContactPage = () => {
               {activeTab === 'schedule' ? (
                 <div>
                   <div className="flex items-center mb-6">
-                    <Calendar className="h-6 w-6 text-blue-600 mr-3" />
+                    <Calendar className="h-6 w-6 text-teal-600 mr-3" />
                     <h2 className="text-2xl font-bold text-gray-900">
                       Schedule Your Free Consultation
                     </h2>
@@ -267,8 +267,8 @@ const ContactPage = () => {
                     <p className="text-gray-600 mb-4">
                       In production, this would embed the Calendly widget for scheduling.
                     </p>
-                    <div className="bg-blue-50 rounded-lg p-4">
-                      <p className="text-sm text-blue-800">
+                    <div className="bg-teal-50 rounded-lg p-4">
+                      <p className="text-sm text-teal-800">
                         <strong>Available Times:</strong><br />
                         Monday - Friday: 9 AM - 6 PM EST<br />
                         Emergency support: 24/7
@@ -279,7 +279,7 @@ const ContactPage = () => {
               ) : (
                 <div>
                   <div className="flex items-center mb-6">
-                    <MessageSquare className="h-6 w-6 text-blue-600 mr-3" />
+                    <MessageSquare className="h-6 w-6 text-teal-600 mr-3" />
                     <h2 className="text-2xl font-bold text-gray-900">
                       Send Us a Message
                     </h2>
@@ -303,7 +303,7 @@ const ContactPage = () => {
                           required
                           value={formData.firstName}
                           onChange={handleInputChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                         />
                       </div>
                       <div>
@@ -317,7 +317,7 @@ const ContactPage = () => {
                           required
                           value={formData.lastName}
                           onChange={handleInputChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -333,7 +333,7 @@ const ContactPage = () => {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
 
@@ -348,7 +348,7 @@ const ContactPage = () => {
                         required
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
 
@@ -362,7 +362,7 @@ const ContactPage = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
 
@@ -376,7 +376,7 @@ const ContactPage = () => {
                         name="jobTitle"
                         value={formData.jobTitle}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
 
@@ -389,7 +389,7 @@ const ContactPage = () => {
                         name="industry"
                         value={formData.industry}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
                         <option value="">Select Industry</option>
                         <option value="financial">Financial Services</option>
@@ -410,7 +410,7 @@ const ContactPage = () => {
                         name="companySize"
                         value={formData.companySize}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
                         <option value="">Select Size</option>
                         <option value="1-10">1-10 employees</option>
@@ -430,7 +430,7 @@ const ContactPage = () => {
                         name="serviceInterest"
                         value={formData.serviceInterest}
                         onChange={handleInputChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       >
                         <option value="">Select Service</option>
                         {services.map((service) => (
@@ -453,7 +453,7 @@ const ContactPage = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         placeholder="Tell us about your IT challenges and how we can help..."
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                       />
                     </div>
 
@@ -465,10 +465,10 @@ const ContactPage = () => {
                         required
                         checked={formData.consent}
                         onChange={handleInputChange}
-                        className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        className="mt-1 h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
                       />
                       <label htmlFor="consent" className="ml-2 text-sm text-gray-700">
-                        I agree to receive communications from Advanced Network Solutions about IT services and solutions. *
+                        I agree to receive communications from Advanced Network Consulting (ANC) about IT services and solutions. *
                       </label>
                     </div>
 
@@ -489,7 +489,7 @@ const ContactPage = () => {
               {/* Why Choose Us */}
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  Why Choose Advanced Network Solutions?
+                  Why Choose Advanced Network Consulting (ANC)?
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -517,26 +517,26 @@ const ContactPage = () => {
               </div>
 
               {/* Response Times */}
-              <div className="bg-blue-50 rounded-2xl p-8">
+              <div className="bg-teal-50 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">
                   Our Response Guarantees
                 </h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Email Response</span>
-                    <span className="font-medium text-blue-900">&lt; 2 hours</span>
+                    <span className="font-medium text-navy-900">&lt; 2 hours</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Phone Response</span>
-                    <span className="font-medium text-blue-900">&lt; 15 minutes</span>
+                    <span className="font-medium text-navy-900">&lt; 15 minutes</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Critical Issues</span>
-                    <span className="font-medium text-blue-900">&lt; 15 minutes</span>
+                    <span className="font-medium text-navy-900">&lt; 15 minutes</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Standard Issues</span>
-                    <span className="font-medium text-blue-900">&lt; 2 hours</span>
+                    <span className="font-medium text-navy-900">&lt; 2 hours</span>
                   </div>
                 </div>
               </div>

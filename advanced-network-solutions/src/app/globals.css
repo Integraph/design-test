@@ -44,17 +44,17 @@ html {
 
 /* Focus styles for accessibility */
 *:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #0d9488;
   outline-offset: 2px;
 }
 
 /* Button hover effects */
 .btn-primary {
-  @apply bg-blue-900 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors duration-200;
+  @apply bg-navy-900 text-white px-6 py-3 rounded-md font-medium hover:bg-navy-800 transition-colors duration-200;
 }
 
 .btn-secondary {
-  @apply bg-white text-blue-900 border-2 border-blue-900 px-6 py-3 rounded-md font-medium hover:bg-blue-50 transition-colors duration-200;
+  @apply bg-white text-navy-900 border-2 border-navy-900 px-6 py-3 rounded-md font-medium hover:bg-teal-50 transition-colors duration-200;
 }
 
 /* Card styles */

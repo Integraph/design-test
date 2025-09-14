@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Packages & Pricing - Advanced Network Solutions',
+  title: 'Packages & Pricing - Advanced Network Consulting (ANC)',
   description: 'Transparent pricing for managed IT services. Choose from Essential, Professional, or Enterprise packages with clear SLA differences and feature comparisons.',
   keywords: 'managed IT pricing, IT service packages, SLA comparison, enterprise IT services, NYC IT pricing',
 };
@@ -160,10 +160,10 @@ const PackagesPricingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-teal-50 to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-teal-100 text-teal-800">
               <Shield className="h-4 w-4 mr-2" />
               Transparent Pricing
             </span>
@@ -171,7 +171,7 @@ const PackagesPricingPage = () => {
           
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Choose Your Perfect{' '}
-            <span className="text-blue-900">IT Package</span>
+            <span className="text-navy-900">IT Package</span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -217,13 +217,13 @@ const PackagesPricingPage = () => {
                 key={index}
                 className={`relative rounded-2xl shadow-lg border-2 ${
                   pkg.popular 
-                    ? 'border-blue-500 bg-blue-50' 
+                    ? 'border-teal-500 bg-teal-50' 
                     : 'border-gray-200 bg-white'
                 }`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
+                    <span className="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
                       <Star className="h-4 w-4 mr-1" />
                       Most Popular
                     </span>
@@ -300,7 +300,7 @@ const PackagesPricingPage = () => {
                     href="/contact"
                     className={`w-full py-3 px-4 rounded-md font-medium text-center transition-colors ${
                       pkg.popular
-                        ? 'bg-blue-900 text-white hover:bg-blue-800'
+                        ? 'bg-navy-900 text-white hover:bg-navy-800'
                         : 'bg-gray-900 text-white hover:bg-gray-800'
                     }`}
                   >
@@ -369,7 +369,7 @@ const PackagesPricingPage = () => {
                 <p className="text-gray-600 mb-4">
                   {addon.description}
                 </p>
-                <div className="text-lg font-bold text-blue-900">
+                <div className="text-lg font-bold text-navy-900">
                   {addon.price}
                 </div>
               </div>
@@ -433,12 +433,12 @@ const PackagesPricingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-900 text-white">
+      <section className="py-16 lg:py-24 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             Schedule a free consultation to discuss your needs and get a custom quote. 
             No obligation, just expert advice.
           </p>
@@ -446,13 +446,13 @@ const PackagesPricingPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center group"
+              className="bg-white text-navy-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center group"
             >
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Free Consultation
             </Link>
             
-            <div className="flex items-center justify-center text-blue-100">
+            <div className="flex items-center justify-center text-teal-100">
               <Phone className="h-4 w-4 mr-2" />
               (555) 123-4567
             </div>

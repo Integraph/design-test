@@ -160,10 +160,10 @@ const ResourcesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-teal-50 to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-teal-100 text-teal-800">
               <FileText className="h-4 w-4 mr-2" />
               Free Resources
             </span>
@@ -171,7 +171,7 @@ const ResourcesPage = () => {
           
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Expert IT Resources for{' '}
-            <span className="text-blue-900">NYC Businesses</span>
+            <span className="text-navy-900">NYC Businesses</span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -209,15 +209,15 @@ const ResourcesPage = () => {
               return (
                 <div key={resource.id} className="card-hover group">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <IconComponent className="h-6 w-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                      <IconComponent className="h-6 w-6 text-teal-600" />
                     </div>
                     {resource.gated && (
                       <Lock className="h-5 w-5 text-gray-400" />
                     )}
                   </div>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-navy-900 transition-colors">
                     {resource.title}
                   </h3>
                   
@@ -237,12 +237,12 @@ const ResourcesPage = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-blue-600">
+                    <span className="text-sm font-medium text-teal-600">
                       {resource.type}
                     </span>
                     <Link
                       href={resource.gated ? `/resources/download/${resource.id}` : `/resources/view/${resource.id}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center group"
+                      className="text-teal-600 hover:text-teal-800 font-medium text-sm flex items-center group"
                     >
                       {resource.gated ? 'Download' : 'View'}
                       <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -280,7 +280,7 @@ const ResourcesPage = () => {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                         selectedCategory === category.id
-                          ? 'bg-blue-900 text-white'
+                          ? 'bg-navy-900 text-white'
                           : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                       }`}
                     >
@@ -298,7 +298,7 @@ const ResourcesPage = () => {
                   placeholder="Search resources..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
+                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent w-64"
                 />
               </div>
             </div>
@@ -311,15 +311,15 @@ const ResourcesPage = () => {
               return (
                 <div key={resource.id} className="card-hover group">
                   <div className="flex items-start justify-between mb-4">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <IconComponent className="h-5 w-5 text-blue-600" />
+                    <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center">
+                      <IconComponent className="h-5 w-5 text-teal-600" />
                     </div>
                     {resource.gated && (
                       <Lock className="h-4 w-4 text-gray-400" />
                     )}
                   </div>
 
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-navy-900 transition-colors">
                     {resource.title}
                   </h3>
                   
@@ -339,12 +339,12 @@ const ResourcesPage = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-blue-600">
+                    <span className="text-xs font-medium text-teal-600">
                       {resource.type}
                     </span>
                     <Link
                       href={resource.gated ? `/resources/download/${resource.id}` : `/resources/view/${resource.id}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center group"
+                      className="text-teal-600 hover:text-teal-800 font-medium text-sm flex items-center group"
                     >
                       {resource.gated ? 'Download' : 'View'}
                       <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -366,12 +366,12 @@ const ResourcesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-900 text-white">
+      <section className="py-16 lg:py-24 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Need Custom Resources?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
             Looking for something specific? Our team can create custom guides, 
             templates, and resources tailored to your industry and requirements.
           </p>
@@ -379,7 +379,7 @@ const ResourcesPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center group"
+              className="bg-white text-navy-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center group"
             >
               Request Custom Resource
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

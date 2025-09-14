@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Footer = () => {
@@ -42,36 +43,41 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <span className="text-2xl font-bold text-blue-400">ANS</span>
-              <span className="text-sm text-gray-300 ml-1">Advanced Network Solutions</span>
+              <Image
+                src="/anc-logo-white.svg"
+                alt="Advanced Network Consulting"
+                width={120}
+                height={40}
+                className="h-10 w-auto mb-2"
+              />
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Expert managed IT services and cybersecurity solutions for regulated SMBs in NYC. 
+              Expert managed IT services and cybersecurity solutions for regulated SMBs and mid-market clients in NYC. 
               NYDFS and HIPAA compliant with 99.9% uptime SLA.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
-                <MapPin className="h-4 w-4 mr-3 text-blue-400" />
+                <MapPin className="h-4 w-4 mr-3 text-teal-400" />
                 <span>New York, NY</span>
               </div>
               <div className="flex items-center text-gray-300">
-                <Phone className="h-4 w-4 mr-3 text-blue-400" />
+                <Phone className="h-4 w-4 mr-3 text-teal-400" />
                 <span>(555) 123-4567</span>
               </div>
               <div className="flex items-center text-gray-300">
-                <Mail className="h-4 w-4 mr-3 text-blue-400" />
-                <span>info@advancednetworksolutions.com</span>
+                <Mail className="h-4 w-4 mr-3 text-teal-400" />
+                <span>info@advancednetworkconsulting.com</span>
               </div>
               <div className="flex items-center text-gray-300">
-                <Clock className="h-4 w-4 mr-3 text-blue-400" />
+                <Clock className="h-4 w-4 mr-3 text-teal-400" />
                 <span>24/7 Support Available</span>
               </div>
             </div>
@@ -85,7 +91,7 @@ const Footer = () => {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -102,7 +108,7 @@ const Footer = () => {
                 <li key={industry.name}>
                   <Link
                     href={industry.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {industry.name}
                   </Link>
@@ -116,7 +122,7 @@ const Footer = () => {
                 <li key={resource.name}>
                   <Link
                     href={resource.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {resource.name}
                   </Link>
@@ -133,7 +139,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -147,7 +153,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-teal-400 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -158,10 +164,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-navy-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Advanced Network Solutions. All rights reserved.
+              © {currentYear} Advanced Network Consulting (ANC). All rights reserved.
             </div>
             
             {/* Certifications */}

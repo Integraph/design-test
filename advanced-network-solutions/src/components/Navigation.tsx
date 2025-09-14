@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navigation = () => {
@@ -25,12 +26,7 @@ const Navigation = () => {
     { name: 'Professional Services', href: '/industries/professional', description: 'Secure Business Operations' },
   ];
 
-  const resources = [
-    { name: 'Guides', href: '/resources/guides' },
-    { name: 'Webinars', href: '/resources/webinars' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-  ];
+  // Removed resources array as requested
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -39,21 +35,27 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-blue-900">ANS</span>
-              <span className="text-sm text-gray-600 ml-1">Advanced Network Solutions</span>
+              <Image
+                src="/anc-logo-blue.svg"
+                alt="Advanced Network Consulting"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">
+          <div className="hidden lg:flex items-center space-x-8 ml-8">
+            <Link href="/" className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium whitespace-nowrap">
               Home
             </Link>
 
             {/* Services Dropdown */}
             <div className="relative group">
               <button
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium flex items-center"
+                className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium flex items-center whitespace-nowrap"
                 onMouseEnter={() => setActiveDropdown('services')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
@@ -70,7 +72,7 @@ const Navigation = () => {
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-navy-900"
                     >
                       {service.name}
                     </Link>
@@ -82,7 +84,7 @@ const Navigation = () => {
             {/* Industries Dropdown */}
             <div className="relative group">
               <button
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium flex items-center"
+                className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium flex items-center whitespace-nowrap"
                 onMouseEnter={() => setActiveDropdown('industries')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
@@ -99,7 +101,7 @@ const Navigation = () => {
                     <Link
                       key={industry.name}
                       href={industry.href}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-navy-900"
                     >
                       <div className="font-medium">{industry.name}</div>
                       <div className="text-xs text-gray-500">{industry.description}</div>
@@ -109,55 +111,22 @@ const Navigation = () => {
               )}
             </div>
 
-            <Link href="/packages-pricing" className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">
+            <Link href="/packages-pricing" className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium whitespace-nowrap">
               Packages & Pricing
             </Link>
 
-            {/* Resources Dropdown */}
-            <div className="relative group">
-              <button
-                className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium flex items-center"
-                onMouseEnter={() => setActiveDropdown('resources')}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                Resources
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-              {activeDropdown === 'resources' && (
-                <div
-                  className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                  onMouseEnter={() => setActiveDropdown('resources')}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {resources.map((resource) => (
-                    <Link
-                      key={resource.name}
-                      href={resource.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-900"
-                    >
-                      {resource.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link href="/about" className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">
+            <Link href="/about" className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium whitespace-nowrap">
               About
             </Link>
 
-            <Link href="/trust-center" className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">
-              Trust Center
-            </Link>
-
-            <Link href="/contact" className="text-gray-700 hover:text-blue-900 px-3 py-2 text-sm font-medium">
+            <Link href="/contact" className="text-gray-700 hover:text-navy-900 px-3 py-2 text-sm font-medium whitespace-nowrap">
               Contact
             </Link>
 
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="bg-blue-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors"
+              className="bg-navy-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-navy-800 transition-colors"
             >
               Schedule Call
             </Link>
@@ -179,7 +148,7 @@ const Navigation = () => {
       {isOpen && (
         <div className="lg:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-            <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900">
+            <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900">
               Home
             </Link>
             
@@ -190,7 +159,7 @@ const Navigation = () => {
                   <Link
                     key={service.name}
                     href={service.href}
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-900"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:text-navy-900"
                   >
                     {service.name}
                   </Link>
@@ -205,7 +174,7 @@ const Navigation = () => {
                   <Link
                     key={industry.name}
                     href={industry.href}
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-900"
+                    className="block px-3 py-2 text-sm text-gray-600 hover:text-navy-900"
                   >
                     {industry.name}
                   </Link>
@@ -213,40 +182,21 @@ const Navigation = () => {
               </div>
             </div>
 
-            <Link href="/packages-pricing" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900">
+            <Link href="/packages-pricing" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900">
               Packages & Pricing
             </Link>
 
-            <div className="px-3 py-2">
-              <div className="text-base font-medium text-gray-700 mb-2">Resources</div>
-              <div className="pl-4 space-y-1">
-                {resources.map((resource) => (
-                  <Link
-                    key={resource.name}
-                    href={resource.href}
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-900"
-                  >
-                    {resource.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900">
+            <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900">
               About
             </Link>
 
-            <Link href="/trust-center" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900">
-              Trust Center
-            </Link>
-
-            <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-900">
+            <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy-900">
               Contact
             </Link>
 
             <Link
               href="/contact"
-              className="block mx-3 mt-4 bg-blue-900 text-white px-4 py-2 rounded-md text-center font-medium hover:bg-blue-800"
+              className="block mx-3 mt-4 bg-navy-900 text-white px-4 py-2 rounded-md text-center font-medium hover:bg-navy-800"
             >
               Schedule Call
             </Link>
